@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Equipos de Computación</title>
+    <link rel="stylesheet" href="index2.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>🖥️ TechStore</h1>
+                <p>Equipos de computación de alta calidad</p>
+            </div>
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Buscar productos...">
+                    <button id="searchBtn">🔍</button>
+                </div>
+            </div>
+            <div class="cart-icon" id="cartIcon">
+                🛒
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner Slider -->
+    <div class="banner-container">
+        <div class="slider" id="slider">
+            <div class="slide" data-slide="0">
+                <div class="slide-content">
+                    <h2>🔥 Laptops Gaming</h2>
+                    <p>Las mejores laptops para gamers y profesionales</p>
+                    <a href="#" class="slide-btn" data-category="laptops">Ver Laptops</a>
+                </div>
+            </div>
+            <div class="slide" data-slide="1">
+                <div class="slide-content">
+                    <h2>⚡ Computadoras de Alto Rendimiento</h2>
+                    <p>PCs para diseño, edición y gaming extremo</p>
+                    <a href="#" class="slide-btn" data-category="desktops">Ver Computadoras</a>
+                </div>
+            </div>
+            <div class="slide" data-slide="2">
+                <div class="slide-content">
+                    <h2>🖥️ Monitores Profesionales</h2>
+                    <p>Calidad 4K, alta frecuencia y curvo</p>
+                    <a href="#" class="slide-btn" data-category="monitors">Ver Monitores</a>
+                </div>
+            </div>
+            <div class="dots" id="dots"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="categories" id="categories">
+            <button class="category-btn active" data-category="all">Todos</button>
+            <button class="category-btn" data-category="laptops">Laptops</button>
+            <button class="category-btn" data-category="desktops">Computadoras</button>
+            <button class="category-btn" data-category="monitors">Monitores</button>
+            <button class="category-btn" data-category="accessories">Accesorios</button>
+            <a class="category-btn" href="../index.html">Ir a la Version 1</a>
+            <a class="category-btn" href="../e-comerce3/index3.html">Ir a la Version 3</a>
+        </div>
+
+        <div class="products-grid" id="productsGrid"></div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="modal" id="cartModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>🛒 Tu Carrito</h2>
+                <span class="close-modal" id="closeModal">&times;</span>
+            </div>
+            <div id="cartItems"></div>
+            <div class="cart-total" id="cartTotal"></div>
+            <button class="checkout-btn" id="checkoutBtn">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>TechStore - Tu tienda de confianza en equipos de computación</p>
+        <p>© 2026 TechStore - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="index2.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechZone Bolivia - Equipos de Computación</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-inner">
+            <div class="logo">Tech<span>Zone</span> Bolivia</div>
+            <div class="search-wrap">
+                <input type="text" placeholder="Buscar productos..." oninput="filterSearch(this.value)">
+            </div>
+            <button class="cart-btn" onclick="toggleCart()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="9" cy="21" r="1" />
+                    <circle cx="20" cy="21" r="1" />
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                </svg>
+                Carrito
+                <span class="cart-count" id="cart-count">0</span>
+            </button>
+        </div>
+    </header>
+    <!-- HERO -->
+    <hero>
+        <div class="hero-inner"
+            style="background: #1e3c72;margin: 0px 5% 0px 14%;padding: 20px 20px 20px 20px;width: 72%;">
+            <div class=" hero-content">
+                <div class="hero-title">TechZone Bolivia</div>
+                <div class="hero-subtitle">Equipos de Computación</div>
+                <div class="hero-description">Encuentra los mejores equipos de computación en Bolivia</div>
+                <button class="hero-btn" onclick="toggleCart()">Ver carrito</button>
+            </div>
+        </div>
+    </hero>
+    <!-- MAIN -->
+    <main class="store">
+        <div class="stats">
+            <div class="stat">
+                <!-- <div class="stat-n">12</div> -->
+                <a href="../e-comerce2/index2.html" class="stat-n">Ir a la Version 2</a>
+                <div class="stat-l">Version 2</div>
+            </div>
+            <div class="stat">
+                <a href="../e-comerce3/index3.html" class="stat-n">Ir a la Version 3</a>
+                <div class="stat-l">Version 3</div>
+            </div>
+            <div class="stat">
+                <div class="stat-n" id="s-sold">284 - 12 - 5</div>
+                <div class="stat-l">Vendidos hoy - productos - categorías</div>
+            </div>
+        </div>
+
+        <div class="cats" id="cats"></div>
+        <div class="grid" id="grid"></div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>© 2026 TechZone Bolivia · Todos los derechos reservados</footer>
+
+    <!-- CART OVERLAY + PANEL -->
+    <div class="overlay" id="overlay" onclick="toggleCart()"></div>
+    <div class="panel" id="cart-panel">
+        <div class="panel-head">
+            Tu carrito
+            <button class="close-btn" onclick="toggleCart()">✕</button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="total-row">
+            <span>Total</span>
+            <span class="total-amt" id="total-price">Bs. 0</span>
+        </div>
+        <button class="checkout-btn" onclick="checkout()">Comprar ahora →</button>
+    </div>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast"></div>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.7.7/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
