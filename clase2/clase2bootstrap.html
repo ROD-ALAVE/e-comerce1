@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Computación y Tecnología</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body class="bg-dark">
+
+    <!-- Encabezado de la tienda -->
+    <header class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-primary sticky-top shadow-lg">
+        <div class="container-fluid">
+            <h1 class="navbar-brand mb-0 fs-3 fw-bold text-info">
+                <i class="bi bi-cpu-fill"></i> TECHSTORE
+            </h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-light fw-semibold" href="#inicio">
+                            <i class="bi bi-house-door-fill"></i> INICIO
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light fw-semibold" href="#productos">
+                            <i class="bi bi-grid-3x3-gap-fill"></i> PRODUCTOS
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light fw-semibold" href="#categorias">
+                            <i class="bi bi-tags-fill"></i> CATEGORÍAS
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light fw-semibold" href="#carrito">
+                            <i class="bi bi-cart3"></i> CARRITO
+                            <span class="badge bg-danger rounded-pill">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="container my-5">
+        <!-- Barra de búsqueda -->
+        <section class="mb-5">
+            <div class="card bg-dark border-info shadow-lg">
+                <div class="card-body p-4">
+                    <h2 class="card-title h3 mb-4 text-info fw-bold">
+                        <i class="bi bi-search"></i> BÚSQUEDA AVANZADA
+                    </h2>
+                    <form action="#" method="get" class="row g-3">
+                        <div class="col-md-9">
+                            <input type="text" name="busqueda"
+                                class="form-control form-control-lg bg-dark text-light border-secondary"
+                                placeholder="Buscar por nombre, modelo o especificación...">
+                        </div>
+                        <div class="col-md-3">
+                            <button type="submit" class="btn btn-primary btn-lg w-100 fw-bold">
+                                <i class="bi bi-search"></i> BUSCAR
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filtros por categoría -->
+        <section id="categorias" class="mb-5">
+            <div class="card bg-dark border-info shadow-lg">
+                <div class="card-body p-4">
+                    <h2 class="card-title h3 mb-4 text-info fw-bold">
+                        <i class="bi bi-funnel-fill"></i> FILTRAR CATEGORÍAS
+                    </h2>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#" class="btn btn-outline-info fw-semibold">
+                            <i class="bi bi-list-ul"></i> TODAS
+                        </a>
+                        <a href="#" class="btn btn-outline-info fw-semibold">
+                            <i class="bi bi-laptop"></i> COMPUTADORAS
+                        </a>
+                        <a href="#" class="btn btn-outline-info fw-semibold">
+                            <i class="bi bi-cpu"></i> COMPONENTES
+                        </a>
+                        <a href="#" class="btn btn-outline-info fw-semibold">
+                            <i class="bi bi-display"></i> PERIFÉRICOS
+                        </a>
+                        <a href="#" class="btn btn-outline-info fw-semibold">
+                            <i class="bi bi-router"></i> NETWORKING
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Listado de productos -->
+        <section id="productos" class="mb-5">
+            <h2 class="h2 mb-4 fw-bold text-info text-center">
+                <i class="bi bi-motherboard-fill"></i> CATÁLOGO TECNOLÓGICO
+            </h2>
+
+            <div class="row g-4">
+                <!-- Producto 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 bg-dark border-primary shadow">
+                        <div class="card-header bg-primary text-white fw-bold">
+                            <span class="badge bg-warning text-dark">OFERTA ESPECIAL</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="text-center mb-3 fs-1">
+                                💻
+                            </div>
+                            <h3 class="card-title h5 text-info fw-bold">LAPTOP GAMER RTX 4070</h3>
+                            <p class="text-muted small mb-2"><strong>SKU:</strong> LG-001-2025</p>
+                            <p class="card-text text-light"><strong>SPECS:</strong> Intel i7-13700H, 16GB DDR5, RTX 4070
+                                8GB, 512GB NVMe SSD</p>
+                            <p class="h4 text-info fw-bold">$1,299.99</p>
+                            <p class="text-secondary"><i class="bi bi-tag-fill"></i> Computadoras</p>
+                            <form action="#" method="post">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text bg-dark text-info border-info">
+                                        <i class="bi bi-hash"></i> Cantidad
+                                    </span>
+                                    <input type="number" class="form-control bg-dark text-light border-info"
+                                        id="cantidad1" name="cantidad" value="1" min="1">
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 fw-bold">
+                                    <i class="bi bi-cart-plus-fill"></i> AÑADIR AL CARRITO
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 bg-dark border-primary shadow">
+                        <div class="card-header bg-success text-white fw-bold">
+                            <span class="badge bg-light text-success">NUEVO</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="text-center mb-3 fs-1">
+                                ⌨️
+                            </div>
+                            <h3 class="card-title h5 text-info fw-bold">TECLADO MECÁNICO RGB</h3>
+                            <p class="text-muted small mb-2"><strong>SKU:</strong> KB-087-2025</p>
+                            <p class="card-text text-light"><strong>SPECS:</strong> Switch Cherry MX Blue, RGB
+                                Personalizable, USB-C</p>
+                            <p class="h4 text-info fw-bold">$89.99</p>
+                            <p class="text-secondary"><i class="bi bi-tag-fill"></i> Periféricos</p>
+                            <form action="#" method="post">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text bg-dark text-info border-info">
+                                        <i class="bi bi-hash"></i> Cantidad
+                                    </span>
+                                    <input type="number" class="form-control bg-dark text-light border-info"
+                                        id="cantidad2" name="cantidad" value="1" min="1">
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 fw-bold">
+                                    <i class="bi bi-cart-plus-fill"></i> AÑADIR AL CARRITO
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 bg-dark border-primary shadow">
+                        <div class="card-header bg-info text-dark fw-bold">
+                            <span class="badge bg-success">ENVÍO GRATIS</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="text-center mb-3 fs-1">
+                                🖥️
+                            </div>
+                            <h3 class="card-title h5 text-info fw-bold">MONITOR GAMER 165Hz</h3>
+                            <p class="text-muted small mb-2"><strong>SKU:</strong> MN-240-2025</p>
+                            <p class="card-text text-light"><strong>SPECS:</strong> 27" QHD, IPS, 165Hz, 1ms, G-Sync
+                                Compatible</p>
+                            <p class="h4 text-info fw-bold">$349.90</p>
+                            <p class="text-secondary"><i class="bi bi-tag-fill"></i> Periféricos</p>
+                            <form action="#" method="post">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text bg-dark text-info border-info">
+                                        <i class="bi bi-hash"></i> Cantidad
+                                    </span>
+                                    <input type="number" class="form-control bg-dark text-light border-info"
+                                        id="cantidad3" name="cantidad" value="1" min="1">
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 fw-bold">
+                                    <i class="bi bi-cart-plus-fill"></i> AÑADIR AL CARRITO
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 bg-dark border-primary shadow">
+                        <div class="card-header bg-danger text-white fw-bold">
+                            <span class="badge bg-light text-danger">POPULAR</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="text-center mb-3 fs-1">
+                                🖱️
+                            </div>
+                            <h3 class="card-title h5 text-info fw-bold">MOUSE GAMING INALÁMBRICO</h3>
+                            <p class="text-muted small mb-2"><strong>SKU:</strong> MS-PRO-2025</p>
+                            <p class="card-text text-light"><strong>SPECS:</strong> 25K DPI, RGB, Batería 70h, Sensor
+                                PixArt</p>
+                            <p class="h4 text-info fw-bold">$59.99</p>
+                            <p class="text-secondary"><i class="bi bi-tag-fill"></i> Periféricos</p>
+                            <form action="#" method="post">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text bg-dark text-info border-info">
+                                        <i class="bi bi-hash"></i> Cantidad
+                                    </span>
+                                    <input type="number" class="form-control bg-dark text-light border-info"
+                                        id="cantidad4" name="cantidad" value="1" min="1">
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 fw-bold">
+                                    <i class="bi bi-cart-plus-fill"></i> AÑADIR AL CARRITO
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 bg-dark border-primary shadow">
+                        <div class="card-header bg-warning text-dark fw-bold">
+                            <span class="badge bg-dark">DESTACADO</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="text-center mb-3 fs-1">
+                                💾
+                            </div>
+                            <h3 class="card-title h5 text-info fw-bold">SSD NVMe Gen4 2TB</h3>
+                            <p class="text-muted small mb-2"><strong>SKU:</strong> SSD-GEN4-2TB</p>
+                            <p class="card-text text-light"><strong>SPECS:</strong> Lectura 7000MB/s, Escritura
+                                5000MB/s, PCIe 4.0</p>
+                            <p class="h4 text-info fw-bold">$179.00</p>
+                            <p class="text-secondary"><i class="bi bi-tag-fill"></i> Componentes</p>
+                            <form action="#" method="post">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text bg-dark text-info border-info">
+                                        <i class="bi bi-hash"></i> Cantidad
+                                    </span>
+                                    <input type="number" class="form-control bg-dark text-light border-info"
+                                        id="cantidad5" name="cantidad" value="1" min="1">
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 fw-bold">
+                                    <i class="bi bi-cart-plus-fill"></i> AÑADIR AL CARRITO
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 bg-dark border-primary shadow">
+                        <div class="card-header bg-secondary text-white fw-bold">
+                            <span class="badge bg-success">GARANTÍA 3 AÑOS</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="text-center mb-3 fs-1">
+                                🎮
+                            </div>
+                            <h3 class="card-title h5 text-info fw-bold">AURICULARES GAMING 7.1</h3>
+                            <p class="text-muted small mb-2"><strong>SKU:</strong> HD-SURROUND-7.1</p>
+                            <p class="card-text text-light"><strong>SPECS:</strong> Sonido Surround 7.1, Micrófono
+                                Retráctil, USB</p>
+                            <p class="h4 text-info fw-bold">$99.75</p>
+                            <p class="text-secondary"><i class="bi bi-tag-fill"></i> Periféricos</p>
+                            <form action="#" method="post">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text bg-dark text-info border-info">
+                                        <i class="bi bi-hash"></i> Cantidad
+                                    </span>
+                                    <input type="number" class="form-control bg-dark text-light border-info"
+                                        id="cantidad6" name="cantidad" value="1" min="1">
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 fw-bold">
+                                    <i class="bi bi-cart-plus-fill"></i> AÑADIR AL CARRITO
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Resumen del carrito -->
+    <aside class="bg-dark py-5 border-top border-primary">
+        <div class="container">
+            <div class="card bg-black border-info shadow-lg">
+                <div class="card-header bg-primary text-white p-3">
+                    <h2 class="h4 mb-0 fw-bold">
+                        <i class="bi bi-cart-check-fill"></i> RESUMEN DE COMPRA
+                    </h2>
+                </div>
+                <div class="card-body p-4">
+                    <p class="fw-bold text-info mb-3">PRODUCTOS SELECCIONADOS:</p>
+                    <ul class="list-group mb-4">
+                        <li
+                            class="list-group-item bg-dark text-light border-secondary d-flex justify-content-between align-items-center">
+                            <span><i class="bi bi-laptop"></i> Laptop Gamer RTX 4070</span>
+                            <span class="badge bg-primary rounded-pill">$1,299.99 x 1</span>
+                        </li>
+                        <li
+                            class="list-group-item bg-dark text-light border-secondary d-flex justify-content-between align-items-center">
+                            <span><i class="bi bi-keyboard"></i> Teclado Mecánico RGB</span>
+                            <span class="badge bg-primary rounded-pill">$89.99 x 2</span>
+                        </li>
+                    </ul>
+                    <div
+                        class="d-flex justify-content-between align-items-center mb-4 p-3 bg-dark border border-info rounded">
+                        <h5 class="mb-0 text-info fw-bold">TOTAL:</h5>
+                        <h3 class="text-info mb-0 fw-bold">$1,479.97</h3>
+                    </div>
+                    <form action="#" method="post">
+                        <button type="submit" class="btn btn-success btn-lg w-100 fw-bold">
+                            <i class="bi bi-credit-card-fill"></i> PROCEDER AL PAGO
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Footer -->
+    <footer class="bg-black text-light py-4 border-top border-primary">
+        <div class="container text-center">
+            <h5 class="mb-3 text-info fw-bold">
+                <i class="bi bi-cpu-fill"></i> TECHSTORE
+            </h5>
+            <p class="mb-2 text-secondary">© 2025 TechStore - Tecnología de Vanguardia</p>
+            <p class="mb-0">
+                <a href="#contacto" class="text-info text-decoration-none">
+                    <i class="bi bi-envelope-fill"></i> Contacto
+                </a> |
+                <a href="#terminos" class="text-info text-decoration-none">
+                    <i class="bi bi-file-text-fill"></i> Términos
+                </a> |
+                <a href="#privacidad" class="text-info text-decoration-none">
+                    <i class="bi bi-shield-lock-fill"></i> Privacidad
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

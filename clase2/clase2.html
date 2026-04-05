@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Online - Catálogo de Productos</title>
+    <!-- Solo HTML estructural, sin CSS ni JS -->
+</head>
+
+<body>
+
+    <!-- Encabezado de la tienda -->
+    <header>
+        <h1>Mi Tienda Online</h1>
+        <nav>
+            <a href="#inicio">Inicio</a> |
+            <a href="#productos">Productos</a> |
+            <a href="#categorias">Categorías</a> |
+            <a href="#carrito">Carrito (0)</a>
+        </nav>
+        <hr>
+    </header>
+
+    <!-- Barra de búsqueda simple -->
+    <section>
+        <h2>Buscar productos</h2>
+        <form action="#" method="get">
+            <input type="text" name="busqueda" placeholder="Nombre o especificación...">
+            <button type="submit">Buscar</button>
+        </form>
+        <hr>
+    </section>
+
+    <!-- Filtros por categoría -->
+    <section>
+        <h2>Filtrar por categoría</h2>
+        <div>
+            <a href="#">Todas</a> |
+            <a href="#">Electrónica</a> |
+            <a href="#">Ropa</a> |
+            <a href="#">Hogar</a> |
+            <a href="#">Deportes</a>
+        </div>
+        <hr>
+    </section>
+
+    <!-- Listado de productos (grid visual con tablas para estructura) -->
+    <section id="productos">
+        <h2>Nuestros Productos</h2>
+
+        <div id="loading-message">
+            <p>Cargando productos...</p>
+        </div>
+        <div id="productos-lista">
+            <!-- Aquí se renderizarán los productos desde el backend -->
+        </div>
+    </section>
+
+    <!-- Resumen del carrito de compras (simulado) -->
+    <aside>
+        <h2>Resumen del Carrito</h2>
+        <p>Productos agregados:</p>
+        <ul>
+            <li>Laptop Gamer - $1,299.99 x 1</li>
+            <li>Camiseta Deportiva - $25.50 x 2</li>
+        </ul>
+        <p><strong>Total:</strong> $1,350.99</p>
+        <form action="#" method="post">
+            <button type="submit">Proceder al pago</button>
+        </form>
+        <hr>
+    </aside>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>© 2025 Mi Tienda Online - Todos los derechos reservados</p>
+        <p><a href="#contacto">Contacto</a> | <a href="#terminos">Términos y condiciones</a> | <a
+                href="#privacidad">Privacidad</a></p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.7.7/dist/axios.min.js"></script>
+    <script src="clase2.js"></script>
+</body>
+
+</html>
+
+<!-- Formulario para agregar un nuevo producto (simulación admin) -->
+<!-- <section>
+        <h2>Agregar Nuevo Producto (Admin)</h2>
+        <form action="#" method="post">
+            <div>
+                <label for="nombre">Nombre del producto:</label><br>
+                <input type="text" id="nombre" name="nombre" required maxlength="100">
+            </div>
+            <div>
+                <label for="espec">Especificaciones:</label><br>
+                <textarea id="espec" name="espec" maxlength="200" rows="2" cols="40"></textarea>
+            </div>
+            <div>
+                <label for="precio">Precio:</label><br>
+                <input type="number" id="precio" name="precio" step="0.01" required>
+            </div>
+            <div>
+                <label for="categoria">Categoría:</label><br>
+                <input type="text" id="categoria" name="categoria" maxlength="50">
+            </div>
+            <div>
+                <label for="icono">Icono (emoji o texto):</label><br>
+                <input type="text" id="icono" name="icono" maxlength="10">
+            </div>
+            <div>
+                <label for="etiqueta">Etiqueta (badge):</label><br>
+                <input type="text" id="etiqueta" name="etiqueta" maxlength="20">
+            </div>
+            <button type="submit">Agregar Producto</button>
+        </form>
+        <hr>
+    </section> -->
