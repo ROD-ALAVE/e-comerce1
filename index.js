@@ -1,4 +1,13 @@
-
+// Ejemplo de un producto individual
+const producto = {
+    id: 1,
+    name: "Laptop Lenovo IdeaPad 3",
+    spec: "Ryzen 5 · 8GB RAM · 512GB SSD",
+    price: 3850,
+    cat: "Laptops",
+    icon: "💻",
+    badge: "hot"
+};
 const products = [
     { id: 1, name: "Laptop Lenovo IdeaPad 3", spec: "Ryzen 5 · 8GB RAM · 512GB SSD", price: 3850, cat: "Laptops", icon: "💻", badge: "hot" },
     { id: 2, name: "Laptop HP Pavilion 15", spec: "Intel i5 · 16GB RAM · 1TB SSD", price: 4200, cat: "Laptops", icon: "💻", badge: "new" },

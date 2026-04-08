@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Productos</title>
+</head>
+
+<body>
+    <nav>
+        <div style="display: grid;grid-template-columns: repeat(4, 1fr);">
+            <div style="margin: auto;">
+                <a href="../index.html" class="stat-n">Ir a la Version 1</a>
+                <div class="stat-l">e-comerce1.html</div>
+            </div>
+            <div style="margin: auto;">
+                <a href="../e-comerce2/index.html" class="stat-n">Ir a la Version 2</a>
+                <div class="stat-l">e-comerce2.html</div>
+            </div>
+            <div style="margin: auto;">
+                <a href="../e-comerce3/index3.html" class="stat-n">Ir a la Version 3</a>
+                <div class="stat-l">e-comerce3.html</div>
+            </div>
+            <div style="margin: auto;">
+                <a href="productos2.html" class="stat-n">Ir a la Version Productos 2</a>
+                <div class="stat-l">productos2.html</div>
+            </div>
+        </div>
+    </nav>
+    <h1>Gestión de Productos</h1>
+
+    <div>
+
+        <!-- Filtros de búsqueda -->
+        <div>
+            <label for="searchName">Buscar por nombre:</label>
+            <input type="text" id="searchName" placeholder="Ej: Laptop">
+            <button id="btnSearchName">Buscar</button>
+        </div>
+
+        <div>
+            <label for="searchCat">Buscar por categoría:</label>
+            <input type="text" id="searchCat" placeholder="Ej: Laptops">
+            <button id="btnSearchCat">Buscar</button>
+        </div>
+
+        <div>
+            <button id="btnReset">Mostrar todos</button>
+        </div>
+
+        <!-- Tabla de productos -->
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Ícono</th>
+                    <th>Nombre</th>
+                    <th>Especificación</th>
+                    <th>Precio</th>
+                    <th>Categoría</th>
+                    <th>Badge</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tablaProductos">
+                <!-- Los productos se cargarán aquí dinámicamente -->
+            </tbody>
+        </table>
+
+        <!-- Formulario para crear/editar producto -->
+        <h2>Formulario de Producto</h2>
+        <form id="formProducto">
+            <input type="hidden" id="productId">
+
+            <div>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" required>
+            </div>
+
+            <div>
+                <label for="spec">Especificación:</label>
+                <input type="text" id="spec" required>
+            </div>
+
+            <div>
+                <label for="price">Precio:</label>
+                <input type="number" id="price" step="0.01" required>
+            </div>
+
+            <div>
+                <label for="cat">Categoría:</label>
+                <input type="text" id="cat" required>
+            </div>
+
+            <div>
+                <label for="icon">Ícono:</label>
+                <input type="text" id="icon" placeholder="Ej: 💻" required>
+            </div>
+
+            <div>
+                <label for="badge">Badge:</label>
+                <input type="text" id="badge" placeholder="hot, new, sale">
+            </div>
+
+            <button type="submit">Guardar</button>
+            <button type="button" id="btnCancelar">Cancelar</button>
+        </form>
+
+        <script src="https://cdn.jsdelivr.net/npm/axios@1.7.7/dist/axios.min.js"></script>
+        <script src="productos.js"></script>
+</body>
+
+</html>
